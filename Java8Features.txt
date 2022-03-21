@@ -1,0 +1,81 @@
+Java 8 Features :
+
+1. Concise Code
+2. Enabling Functional Programming
+
+1. Lamda Expressions
+2. Functional Interface
+3. Default Methods and Static methods
+4. Predefined Functional Interfaces
+	Predicate
+	Function
+	Consumer
+	Supplier
+	etc
+5. Double colon Operator (::)
+	Method Reference
+	Constructor Reference
+6. Streams API
+7. Data and Time API
+8. Optional Class
+9. Nashron Javascript Engine
+etc
+
+1. Lambda Expressions:
+1930
+LISP - First introduced lambda function
+
+The main objective of lambda Expression :
+to bring benefits of functional programming into java
+
+What is Lambda Expression:
+It is an anonymous function
+	Nameless
+	Without return type
+	Without modifiers
+Ex :
+Old Code :
+	public void m1() {
+		System.out.println("Hello world!!");
+	}
+
+New Code :
+	() -> System.out.println("Hello world!!");	
+
+Ex : 2
+	public void m1(int a, int b){
+		System.out.println(a+b);
+	}
+
+New Code :
+	(a,b)->System.out.println(a+b);
+
+Ex : 3
+	public int squreIt(int n){
+		return n*n;
+	}
+
+New Code :
+	n -> n*n;
+
+Ex : 4
+	public void m1(String s) {
+		return s.length();
+	}
+
+New Code :
+	s -> s.length();
+
+Functional Interface :
+
+Predefined Functional Interfaces :
+1. Runnable ==> run()
+2. Comparable ==> compareTo()
+3. Comparator ==> compare()
+4. ActionListener ==> actionPerformed()
+5. Callable ==> call()
+ 
+Single abstract method required
+Default/static methods are optional
+
+https://www.youtube.com/watch?v=k2PiRM2d_iU 
