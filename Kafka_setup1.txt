@@ -1,0 +1,48 @@
+/home/gobinath/Software/kafka
+
+mkdir data
+mkdir zookeeper
+mkdir broker-0
+mkdir broker-1
+mkdir broker-2
+
+server.1=localhost:2888:3888
+
+-deamon 
+
+jps
+
+/home/gobinath/Software/kafka/data/zookeeper
+
+zookeeper-server-start.sh zookeeper.properties
+
+Connect zookeeper shell:
+
+zookeeper-shell.sh localhost:2181
+
+ls /brokers/ids
+
+kafka-server-start.sh server-0.properties
+kafka-server-start.sh server-1.properties
+kafka-server-start.sh server-2.properties
+
+kafka-topics.sh --list --bootstrap-server localhost:9092,localhost:9093,localhost:9094
+
+kafka-topics.sh --create --topic first-topic --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --partitions 2 --replication-factor 3
+
+kafka-topics.sh --describe --topic first-topic --bootstrap-server localhost:9092,localhost:9093,localhost:9094
+
+kafka-console-producer.sh --broker-list localhost:9092,localhost:9093 --topic first-topic
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic first-topic --from-beginning
+
+
+
+
+
+
+
+
+
+
+
