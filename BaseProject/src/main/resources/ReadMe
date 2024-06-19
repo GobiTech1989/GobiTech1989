@@ -1,0 +1,16 @@
+Implementations:
+
+##Swagger##
+
+1. Swagger 3
+2. URL : http://localhost:8181/swagger-ui/index.html
+
+##H2 Database##
+
+1. URL : localhost:8181/h2-ui/
+
+##JPA Auditing##
+##Exception##
+##Logback.xml##
+##Security##
+##SignUp, Login##
